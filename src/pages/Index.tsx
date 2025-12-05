@@ -5,6 +5,7 @@ import { exportToCSV } from "@/lib/csv";
 import { ItemForm } from "@/components/ItemForm";
 import { ItemTable } from "@/components/ItemTable";
 import { Dashboard } from "@/components/Dashboard";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -89,10 +90,13 @@ const Index = () => {
               <Package className="h-8 w-8 text-primary" />
               <h1 className="text-2xl font-bold text-foreground">Simple Inventory Management System</h1>
             </div>
-            <Button onClick={handleExportCSV} variant="outline" size="lg">
-              <Download className="h-4 w-4 mr-2" />
-              Export CSV
-            </Button>
+            <div className="flex items-center gap-3">
+              <ThemeToggle />
+              <Button onClick={handleExportCSV} variant="outline" size="lg">
+                <Download className="h-4 w-4 mr-2" />
+                Export CSV
+              </Button>
+            </div>
           </div>
         </div>
       </header>
