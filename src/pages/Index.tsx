@@ -86,7 +86,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Package className="h-8 w-8 text-primary" />
-              <h1 className="text-3xl font-bold text-foreground">Stuff Tracker</h1>
+              <h1 className="text-2xl font-bold text-foreground">Simple Inventory Management System</h1>
             </div>
             <Button onClick={handleExportCSV} variant="outline" size="lg">
               <Download className="h-4 w-4 mr-2" />
