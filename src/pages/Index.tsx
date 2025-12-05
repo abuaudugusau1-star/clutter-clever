@@ -4,6 +4,7 @@ import { loadItems, saveItems } from "@/lib/storage";
 import { exportToCSV } from "@/lib/csv";
 import { ItemForm } from "@/components/ItemForm";
 import { ItemTable } from "@/components/ItemTable";
+import { Dashboard } from "@/components/Dashboard";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -98,6 +99,9 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 space-y-8">
+        {/* Dashboard */}
+        <Dashboard items={items} />
+
         {/* Add Item Form */}
         <ItemForm onSubmit={handleAddItem} />
 
